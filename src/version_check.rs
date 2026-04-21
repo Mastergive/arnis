@@ -14,9 +14,9 @@ const REMOTE_CARGO_TOML_URL: &str =
 pub fn check_for_updates() -> Result<bool, Box<dyn Error>> {
     let client: Client = Client::builder()
         .user_agent(concat!(
-          "arnis/",
-          env!("CARGO_PKG_VERSION"),
-         " (+https://github.com/louis-e/arnis)"
+            "arnis/",
+            env!("CARGO_PKG_VERSION"),
+            " (+https://github.com/louis-e/arnis)"
         ))
         .connect_timeout(Duration::from_secs(5))
         .timeout(Duration::from_secs(10))
