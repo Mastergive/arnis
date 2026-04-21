@@ -189,9 +189,9 @@ fn fetch_overture_buildings_inner(
     let client = Client::builder()
         .timeout(Duration::from_secs(HTTP_TIMEOUT_SECS))
         .user_agent(concat!(
-          "arnis/",
-          env!("CARGO_PKG_VERSION"),
-         " (+https://github.com/louis-e/arnis)"
+            "arnis/",
+            env!("CARGO_PKG_VERSION"),
+            " (+https://github.com/louis-e/arnis)"
         ))
         .build()?;
 
