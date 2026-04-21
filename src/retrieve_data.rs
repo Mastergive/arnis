@@ -24,9 +24,9 @@ fn download_with_reqwest(
     let client: Client = ClientBuilder::new()
         .timeout(Duration::from_secs(timeout_secs))
         .user_agent(concat!(
-          "arnis/",
-          env!("CARGO_PKG_VERSION"),
-         " (+https://github.com/louis-e/arnis)"
+            "arnis/",
+            env!("CARGO_PKG_VERSION"),
+            " (+https://github.com/louis-e/arnis)"
         ))
         .build()?;
 
