@@ -1,4 +1,4 @@
-name: Build and Release Arnis
+name: Build Arnis
 
 on:
   release:
