@@ -23,7 +23,11 @@ fn download_with_reqwest(
 ) -> Result<String, Box<dyn std::error::Error>> {
     let client: Client = ClientBuilder::new()
         .timeout(Duration::from_secs(timeout_secs))
-        .user_agent(concat!("arnis/", env!("CARGO_PKG_VERSION"), " (+https://github.com/louis-e/arnis)"))
+        .user_agent(concat!(
+          "arnis/",
+          env!("CARGO_PKG_VERSION"),
+         " (+https://github.com/louis-e/arnis)"
+        ))
         .build()?;
 
     let response: Result<reqwest::blocking::Response, reqwest::Error> =
